@@ -14,6 +14,9 @@ class CounterApp extends StatelessWidget {
     final launchListBloc = LaunchListBloc(launchRepository);
 
     return MaterialApp(
+      initialRoute: '/',
+      // navigatorKey: Modular.navigatorKey,
+      // onGenerateRoute: Modular.generateRoute,
       home: BlocProvider<LaunchListBloc>(
         create: (context) => launchListBloc,
         child: LaunchListScreen(),

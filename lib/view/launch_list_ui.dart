@@ -128,13 +128,21 @@ class LaunchListItem extends StatelessWidget {
             ],
           ),
           onTap: () {
-            // Navigate to launch details screen
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => LaunchDetail(launch: launch),
               ),
             );
+
+            // Modular.to.navigate('/testRT');
+
+            // // Navigator.push(
+            // //   context,
+            // //   MaterialPageRoute(
+            // //     builder: (context) => TestRte(),
+            // //   ),
+            // // );
           },
         ),
       ),
