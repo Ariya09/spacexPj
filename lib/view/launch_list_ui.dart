@@ -45,7 +45,7 @@ class _LaunchListScreenState extends State<LaunchListScreen> {
                   child: SearchBar(
                     leading: const Icon(Icons.search),
                     overlayColor: MaterialStateProperty.all(Colors.blue),
-                    hintText: 'Search Launch..',
+                    // hintText: 'Search Launch..',
                     // constraints:
                     //     const BoxConstraints(maxWidth: 350.0, minHeight: 45.0),
                     shape: MaterialStateProperty.all(
