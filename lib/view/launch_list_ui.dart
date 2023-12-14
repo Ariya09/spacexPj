@@ -26,7 +26,7 @@ class _LaunchListScreenState extends State<LaunchListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'SpaceX Launches XXXXXXXX',
+          'SpaceX Launches ',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color.fromARGB(213, 5, 13, 158),
