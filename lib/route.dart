@@ -1,22 +1,14 @@
-import 'package:flutter_modular/flutter_modular.dart';
+// import 'package:flutter_modular/flutter_modular.dart';
 
-class LaunchListModule extends Module {
-  @override
-  void binds(i) {}
+// import 'view/launch_list_ui.dart';
 
-  @override
-  void routes(r) {}
-}
-
-// class LaunchListModule extends Module {
+// class AppModule extends Module {
 //   @override
-//   final List<Bind> binds = [
-//     Bind.singleton((i) => LaunchListBloc()),
-//   ];
+//   void binds(i) {}
 
 //   @override
-//   final List<ModularRoute> routes = [
-//     ChildRoute('/', child: (_, args) => LaunchList()),
-//   ];
+//   void routes(r) {
+//     r.child('/', child: (context) => LaunchListScreen());
+//     // r.child('/launch_datail', child: ((context) => LaunchDetail(launch: launch))
+//   }
 // }
-

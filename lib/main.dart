@@ -5,5 +5,5 @@ import 'package:flutter_counter/launch_observer.dart';
 
 void main() {
   Bloc.observer = const LaunchObserver();
-  runApp(CounterApp());
+  return runApp(CounterApp());
 }
