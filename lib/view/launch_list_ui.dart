@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_counter/repositoey/option.dart';
+import 'package:flutter_counter/view/launch_detail.dart';
 
 import '../bloc/launch_list_bloc.dart';
 import '../models/spacex_latest.dart';
-import 'launch_detail.dart';
 
 class LaunchListScreen extends StatefulWidget {
   const LaunchListScreen({Key? key}) : super(key: key);
@@ -134,15 +134,12 @@ class LaunchListItem extends StatelessWidget {
                 builder: (context) => LaunchDetail(launch: launch),
               ),
             );
-
-            // Modular.to.navigate('/testRT');
-
-            // // Navigator.push(
-            // //   context,
-            // //   MaterialPageRoute(
-            // //     builder: (context) => TestRte(),
-            // //   ),
-            // // );
+            // try {
+            //   Modular.to.navigate('/testRT');
+            // } on Exception catch (e) {
+            //   // Anything else that is an exception
+            //   print('Unknown exception: $e');
+            // }
           },
         ),
       ),
