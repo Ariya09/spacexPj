@@ -4,8 +4,8 @@ import 'package:flutter_counter/bloc/launch_list_bloc.dart';
 import 'package:flutter_counter/repositoey/spacex_repository.dart';
 import 'package:flutter_counter/view/launch_list_ui.dart';
 
-class CounterApp extends StatelessWidget {
-  const CounterApp({super.key});
+class LaunchApp extends StatelessWidget {
+  const LaunchApp({super.key});
 
   @override
   Widget build(BuildContext context) {

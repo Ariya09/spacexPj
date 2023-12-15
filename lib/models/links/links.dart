@@ -1,6 +1,6 @@
-import 'package:flutter_counter/models/flickr.dart';
-import 'package:flutter_counter/models/patch.dart';
-import 'package:flutter_counter/models/reddit.dart';
+import 'package:flutter_counter/models/flickr/flickr.dart';
+import 'package:flutter_counter/models/patch/patch.dart';
+import 'package:flutter_counter/models/reddit/reddit.dart';
 
 class Links {
   Patch? patch;

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_counter/models/launchpads.dart';
+import 'package:flutter_counter/models/launchpad/launchpads.dart';
 import 'package:http/http.dart' as http;
 
-import '../models/spacex_latest.dart';
+import '../models/spacex_past/spacex_latest.dart';
 
 class LaunchDetail extends StatelessWidget {
   final SpacexLatest launch;

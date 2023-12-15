@@ -4,7 +4,7 @@ import 'package:flutter_counter/repositoey/option.dart';
 import 'package:flutter_counter/view/launch_detail.dart';
 
 import '../bloc/launch_list_bloc.dart';
-import '../models/spacex_latest.dart';
+import '../models/spacex_past/spacex_latest.dart';
 
 class LaunchListScreen extends StatefulWidget {
   const LaunchListScreen({Key? key}) : super(key: key);

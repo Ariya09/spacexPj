@@ -7,5 +7,5 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 void main() {
   Bloc.observer = const LaunchObserver();
-  return runApp(ModularApp(module: AppModule(), child: CounterApp()));
+  return runApp(ModularApp(module: AppModule(), child: LaunchApp()));
 }

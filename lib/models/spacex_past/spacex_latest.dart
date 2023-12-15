@@ -4,9 +4,9 @@
 
 import 'dart:convert';
 
-import 'package:flutter_counter/models/core.dart';
-import 'package:flutter_counter/models/crew.dart';
-import 'package:flutter_counter/models/links.dart';
+import 'package:flutter_counter/models/core/core.dart';
+import 'package:flutter_counter/models/crew/crew.dart';
+import 'package:flutter_counter/models/links/links.dart';
 
 SpacexLatest spacexLatestFromJson(String str) =>
     SpacexLatest.fromJson(json.decode(str));

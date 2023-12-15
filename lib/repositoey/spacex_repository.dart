@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import '../models/spacex_latest.dart';
+import '../models/spacex_past/spacex_latest.dart';
 
 abstract class LaunchRepository {
   Future<List<SpacexLatest>> fetchLaunches();
