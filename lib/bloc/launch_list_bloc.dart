@@ -1,10 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_counter/models/spacexLatest/spacex_latest.dart';
 import 'package:flutter_counter/repositoey/option.dart';
 import 'package:flutter_counter/repositoey/spacex_repository.dart';
-
-import '../models/spacex_past/spacex_latest.dart';
 
 part 'launch_list_event.dart';
 part 'launch_list_state.dart';

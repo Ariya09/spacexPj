@@ -8,6 +8,7 @@ class AppModule extends Module {
   void routes(r) {
     r.child('/', child: (context) => LaunchListScreen());
     r.child('/testRT', child: (context) => TestRte());
-    // r.child('/launch_datail', child: ((context) => LaunchDetail(launch: launch))
+
+    // r.child('/launch_datail', child: ((context) => LaunchDetail(launch: launch));
   }
 }

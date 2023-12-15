@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_counter/bloc/launch_list_bloc.dart';
 import 'package:flutter_counter/repositoey/spacex_repository.dart';
-import 'package:flutter_counter/view/launch_list_ui.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class LaunchApp extends StatelessWidget {
   const LaunchApp({super.key});
@@ -14,12 +14,11 @@ class LaunchApp extends StatelessWidget {
     final launchListBloc = LaunchListBloc(launchRepository);
 
     return MaterialApp(
-      initialRoute: '/',
-      // navigatorKey: Modular.navigatorKey,
-      // onGenerateRoute: Modular.generateRoute,
       home: BlocProvider<LaunchListBloc>(
         create: (context) => launchListBloc,
-        child: LaunchListScreen(),
+        child: MaterialApp.router(
+          routerConfig: Modular.routerConfig,
+        ),
       ),
     );
   }

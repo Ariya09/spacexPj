@@ -7,11 +7,6 @@ sealed class LaunchListEvent extends Equatable {
   List<Object> get props => [];
 }
 
-// class FetchLaunchesEvent extends LaunchListEvent {
-//   final String? query;
-//   FetchLaunchesEvent({this.query});
-// }
-
 @immutable
 // abstract class LaunchListEvent {}
 
@@ -27,4 +22,13 @@ class SortLaunchesEvent extends LaunchListEvent {
   final LaunchSortOption sortOption;
 
   SortLaunchesEvent(this.sortOption);
+}
+
+class LaunchDetailEvent extends LaunchListEvent {
+  final LaunchListBloc launch;
+
+  const LaunchDetailEvent({required this.launch});
+
+  @override
+  List<Object> get props => [launch];
 }

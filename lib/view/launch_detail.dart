@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_counter/models/launchpad/launchpads.dart';
 import 'package:flutter_counter/models/playload/playload.dart';
 import 'package:flutter_counter/models/rocket/rocket.dart';
+import 'package:flutter_counter/models/spacexLatest/spacex_latest.dart';
 import 'package:http/http.dart' as http;
-
-import '../models/spacex_past/spacex_latest.dart';
 
 class LaunchDetail extends StatelessWidget {
   final SpacexLatest launch;
@@ -92,7 +91,6 @@ class LaunchDetail extends StatelessWidget {
                                   Text_Detail('Local', launchpad.locality),
                                   Text_Detail('Region', launchpad.region),
                                   Text_Detail('Time zone', launchpad.timezone),
-                                  Text_Detail('Status', launchpad.status),
                                   Text_Detail('Status', launchpad.status),
                                 ],
                               ),

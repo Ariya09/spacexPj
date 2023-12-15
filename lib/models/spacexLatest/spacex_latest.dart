@@ -88,6 +88,7 @@ class SpacexLatest {
         // crew: json["crew"] == null
         //     ? []
         //     : List<Crew>.from(json["crew"]!.map((x) => Crew.fromJson(x))),
+
         ships: json["ships"] == null
             ? []
             : List<dynamic>.from(json["ships"]!.map((x) => x)),
