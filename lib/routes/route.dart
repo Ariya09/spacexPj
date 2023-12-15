@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'view/launch_list_ui.dart';
-import 'view/testRoute.dart';
+import '../view/launch_list_ui.dart';
+import '../view/testRoute.dart';
 
 class AppModule extends Module {
   @override
