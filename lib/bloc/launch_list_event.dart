@@ -24,8 +24,16 @@ class SortLaunchesEvent extends LaunchListEvent {
   SortLaunchesEvent(this.sortOption);
 }
 
+// class LaunchDetailEvent extends LaunchListEvent {
+//   final LaunchListBloc launch;
+
+//   const LaunchDetailEvent({required this.launch});
+
+//   @override
+//   List<Object> get props => [launch];
+// }
 class LaunchDetailEvent extends LaunchListEvent {
-  final LaunchListBloc launch;
+  final String launch;
 
   const LaunchDetailEvent({required this.launch});
 

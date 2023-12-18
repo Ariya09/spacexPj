@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_counter/bloc/launch_list_bloc.dart';
 import 'package:flutter_counter/models/spacexLatest/spacex_latest.dart';
 import 'package:flutter_counter/repositoey/option.dart';
-import 'package:flutter_counter/view/launch_detail.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class LaunchListScreen extends StatefulWidget {
   const LaunchListScreen({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class LaunchListScreen extends StatefulWidget {
 
 class _LaunchListScreenState extends State<LaunchListScreen> {
   LaunchSortOption _selectedSortOption = LaunchSortOption.name;
+
   @override
   void initState() {
     super.initState();
@@ -44,9 +45,7 @@ class _LaunchListScreenState extends State<LaunchListScreen> {
                   child: SearchBar(
                     leading: const Icon(Icons.search),
                     overlayColor: MaterialStateProperty.all(Colors.blue),
-                    // hintText: 'Search Launch..',
-                    // constraints:
-                    //     const BoxConstraints(maxWidth: 350.0, minHeight: 45.0),
+                    hintText: 'Search Launch..',
                     shape: MaterialStateProperty.all(
                         const ContinuousRectangleBorder(
                             borderRadius:
@@ -120,21 +119,21 @@ class LaunchListItem extends StatelessWidget {
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Text(
-              //     'Launch Date: ${launch.dateUtc?.toLocal().year}-${launch.dateUtc?.toLocal().month}-${launch.dateUtc?.toLocal().day}'),
               Text('Launch Time: ${launch.dateUtc?.toLocal()}'),
               Text('State: ${launch.success ?? false}'),
             ],
           ),
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => LaunchDetail(launch: launch),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => LaunchDetail(launch: launch),
+            //   ),
+            // );
+            BlocProvider.of<LaunchListBloc>(context)
+                .add(LaunchDetailEvent(launch: launch.id.toString()));
 
-            // Modular.to.pushNamed('/testRT');
+            Modular.to.navigate('/testRT');
             // print('tttt');
           },
         ),

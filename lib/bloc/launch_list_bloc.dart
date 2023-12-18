@@ -22,6 +22,17 @@ class LaunchListBloc extends Bloc<LaunchListEvent, LaunchListState> {
       }
     });
 
+    on<LaunchDetailEvent>((event, emit) async {
+      emit(LoadingLaunchListState());
+      try {
+        final launches =
+            await _repository.fetchLaunchDetail(event.launch.toString());
+        emit(SuccessLaunchListState(launches as List<SpacexLatest>));
+      } catch (error) {
+        emit(ErrorLaunchListState(error.toString()));
+      }
+    });
+
     on<SearchLaunchEvent>((event, emit) async {
       final launches = await _repository.fetchLaunches();
       final filteredLaunches = launches
